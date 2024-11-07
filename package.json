@@ -1,0 +1,12 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
