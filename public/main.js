@@ -1,7 +1,7 @@
 const addToDo = (event) => {
     event.preventDefault();
 
-    const userInput = document.getElementById('Input').value;
+    const userInput = document.getElementById('Input').value.trim();
 
     const taskContainer = document.createElement('div');
     taskContainer.style.cssText = 'display: flex; flex-direction: row; align-Items: center';
@@ -19,6 +19,8 @@ const addToDo = (event) => {
     
     taskContainer.appendChild(newPara);
     taskContainer.appendChild(delBtn);
+
+    document.getElementById('Input').value = '';
     
     const taskDisplay = document.getElementById('toDoList');
     taskDisplay.appendChild(taskContainer);
