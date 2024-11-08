@@ -3,8 +3,8 @@ const addToDo = (event) => {
 
     const userInput = document.getElementById('Input').value.trim();
 
-    const taskContainer = document.createElement('div');
-    taskContainer.style.cssText = 'display: flex; flex-direction: row; align-Items: center';
+    const divContainer = document.createElement('div');
+    divContainer.style.cssText = 'display: flex; flex-direction: row; align-Items: center';
     
     const newPara = document.createElement('p');
     newPara.style.cssText = 'padding: 5px 10px; min-width: 300px; margin-top: 10px';
@@ -14,16 +14,22 @@ const addToDo = (event) => {
     delBtn.textContent = 'Delete';
     delBtn.style.cssText = 'background-color: red; padding: 5px 10px; color: white; margin-top: 10px';
     delBtn.addEventListener('click', () => {
-        taskContainer.remove()
-    })
+        divContainer.remove()
+    });
     
-    taskContainer.appendChild(newPara);
-    taskContainer.appendChild(delBtn);
+    divContainer.appendChild(newPara);
+    divContainer.appendChild(delBtn);
 
     document.getElementById('Input').value = '';
-    
+
     const taskDisplay = document.getElementById('toDoList');
-    taskDisplay.appendChild(taskContainer);
+
+    if(!userInput) {
+        alert('please enter a task');
+    } 
+    else {
+            taskDisplay.appendChild(divContainer);
+    }
     
 
     const toDoList = [];
