@@ -28,7 +28,7 @@ const addToDo = (event) => {
         alert('please enter a task');
     } 
     else {
-            taskDisplay.appendChild(divContainer);
+        taskDisplay.appendChild(divContainer);
     }
     
 
